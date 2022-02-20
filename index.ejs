@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>samia</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      body{
+    margin: auto;
+    padding: 0px;
+    
+  background-color: rgb(233, 224, 224);
+  opacity: 0.8;/* this proparity to color transparency*/
+}
+nav{
+    background:rgb(75, 64, 64);
+    color:#fff;
+overflow:hidden;
+}
+nav a img{
+    display: none;
+}
+nav ul{
+    list-style:none;
+    padding-left:0;
+    float: right;
+}
+nav ul li{
+    float:left;
+    padding:15px;
+}
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:20px;
+}
+nav ul li a:hover{
+    color:gray;
+}
+.dark button{
+    display: none;
+}
+.dark-mode {
+    background-color: black;
+    color: white;
+  }
+.me{
+    float: left;
+    padding-top: 15px;
+}
+nav .me a{
+    text-decoration:none;
+    color:white;
+    font-size:25px;
+    margin-left: 50px;
+  font-weight: bold;
+}
+.all{
+    background-color: white;
+    margin-left: 200px;
+}
+.tag img{
+    position: absolute;
+    left: 100px;
+    z-index: -1;
+   top: 150px;
+   width: 350px;}
+.cotainer{
+    display: grid;/* code for division the main div */
+    grid-template-columns: 1fr  1fr  ;/* for division 2 columns*/
+    background-color: rgb(75, 64, 64);
+    margin-left: 200px;
+    width: 1000px;
+    margin-top: 350px;
+    opacity: 0.8;
+    color: white;
+}
+.cotainer h3{
+    background-color:rgb(240, 162, 162) ;
+    border-radius: 8px;
+    color: black;
+    margin-left: 100px;
+    width: 150px;
+    text-align: center;
+}
+.cotainer ul{
+   list-style-type: none;
+    margin-left: 70px;
+}
+.cotainer ul li{
+    color:white;
+    font-size: 20px;
+    padding: 10px;
+}
+.first{
+    grid-column: 1  ;
+    display: block;
+    margin-left: 150px;
+    font-size: 20px;
+}
+.second button{
+    background-color:rgb(240, 162, 162) ;
+    border-radius: 5px;
+    width: 150px;
+    height: 50px;
+    position: relative;
+    top: 200px;
+    right: 80px;  
+}
+.second button a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+p.round{
+        border-radius: 5px; /* this proparity to make rounded edges*/
+        background-color: rgb(240, 162, 162) ;
+        background-size: 50px 27px;
+        width: 200px;  
+      }
+ .round1{
+     width: 30px;
+     background-color: white;
+ }
+.one{
+    grid-column: 1;
+    display: block;
+  margin-top: 100px;
+  margin-left: 100px;
+}
+.three{
+    grid-column: 2;
+    display: block;
+    margin-top: 100px;
+    margin-left: 50px;
+}
+.work{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  width: 1000px;
+  position: relative;
+  left: 200px;
+  background-color: rgb(75, 64, 64);
+  opacity: 0.8;
+}
+.work img{
+  width: 100%;
+    height: 400px;
+}
+.tag3{
+    grid-column: 1;
+    display: block;
+}
+.tag4{
+    margin-top: 60px;
+}
+.work h3{
+    background-color:rgb(240, 162, 162) ;
+    border-radius: 5px;
+    color: black;
+    margin-left: 400px;
+    width: 150px;
+    text-align: center;
+}
+.contact{
+  width: 600px;
+  position: relative;
+  left: 400px;
+  background-color: rgb(75, 64, 64);
+  opacity: 0.8;
+}
+.contact h3{
+    position: relative;
+    top: 10px;
+    text-align: center;
+    background-color:rgb(240, 162, 162) ;
+    width: 150px;
+    color: black;
+    margin-left: 200px;
+    border-radius: 5px;
+}
+.groub-input{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+input{
+    width: 70%;
+    border: white;
+    outline: 1px solid rgb(9, 9, 29);
+    height: 40px;
+    box-sizing: border-box;
+    padding: 10px;  
+}
+textarea{
+    width: 60%;
+    height: 100px;
+    border-color: rgb(9, 9, 29);
+}
+.contact button{
+    width: 100px;
+    height: 40px;
+    background-color: green;
+    border-radius: 5px;
+    margin-left: 230px;
+    color: white;
+}
+.copy{
+    background:rgb(75, 64, 64);  
+}
+.copy p{
+    position: relative;
+    top: 20px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+.copy img{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: 600px;
+  padding: 20px;
+}
+header div ul{
+    display: none;
+}
+/* this media jquery for small devices like mobiles*/
+@media screen  and (max-width: 450px) {
+    nav .me {
+        display: none;
+    }
+    nav a img{
+        display: block ;
+        margin-left: 20px;
+        height: 30px;
+    }
+    nav ul{
+        display: none;
+    }
+    .dark button{
+        display: block;
+        float: right;
+        position: relative;
+        top: 10px;
+    }
+    .dark button img{
+        width: 30px;
+        height: 30px;   
+}
+  header div ul{
+      display: block;
+      background-color: rgb(75, 64, 64);
+  }
+    div a {
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        padding: 15px;
+        display:inline-block;
+      }
+      ul {
+        display: inline;
+        margin: 0px;
+        padding: 0px;
+      }
+      ul li {
+          display: inline-block;
+    }
+      ul li:hover {
+          background:rgb(75, 64, 64);
+    }
+      ul li:hover ul {
+          display: block;
+        }
+      ul li ul {
+        position: absolute;
+        width: 200px;
+        display: none;
+      }
+      ul li ul li { 
+        background: rgb(75, 64, 64); 
+        display: block; 
+      }
+      ul li ul li a {
+          display:block !important;
+        } 
+      ul li ul li:hover {
+          background: #666;
+        }
+    .tag img{
+width: 200px;
+height: 200px;
+float: left;
+position: relative;
+top: 10px;
+left: 10px;
+animation: myfirst 15s 2;
+animation-direction: alternate;
+    }    
+@keyframes myfirst {
+    0%   { left: 0px; top: 0px;}
+    25%  {left: 200px; top: 0px;}
+    50%  { left: 200px; top: 200px;}
+    75%  { left: 0px; top: 200px;}
+    100% {left: 0px; top: 0px;}
+  }
+   .cotainer{
+       width: 100%;
+    margin: 0;
+   }
+   .cotainer ul li{
+       font-size: 15px;
+   }
+   .first{
+       margin-left:10px ;
+      width: 100%;
+   }
+   .one , .three{
+    width: 160px;
+   }
+  .three{
+      margin-left: 40px;
+  }
+  .one{
+      margin-left: 50px;
+  }
+   .one h3{
+       margin-left: 0px;
+   }
+   .three h3  {
+    margin-left: 0px;
+   }
+   .three ul {
+    margin:0px;
+  
+   }
+   
+   .one ul{
+       margin-left: 0px;
+   }
+   .second button{
+       position: relative;
+       top:300px;
+   width: 200px;
+   right: 100px;
+   }
+ .work{
+     width: 100%;
+     position: relative;
+     left: 0px;
+ }
+ .work img{
+     width: 200px;
+     height: 100px; 
+ }
+ .tag3 h3{
+     margin-left: 50px;
+ }
+ .contact{
+     width: 420px;
+     position: relative;
+     left:0px;
+ }
+ .contact h3{
+   margin-left: 120px;
+ }
+ .contact input  {
+   width: 300px;
+ }
+ .contact button{
+     margin-left: 150px;
+     width: 100px;
+ }
+ .contact button a{
+     font-size: 15px;
+     position: relative;
+     bottom:5px;
+ }
+ .contact textarea{
+     margin-left: 0px;
+    
+ }
+.copy{
+  width: 400px;
+  position: relative;
+  left:0px;
+}
+.copy p{
+    font-size: 15px;
+}
+.copy img{
+    position: relative;
+    left: 60px;
+}
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- this header with lists-->
+        <div>
+            <div class="dark">
+                <button onclick="myFunction()"><img src="images/hh.png"></button>
+            </div>
+            <script>//code to convert from light to dark mode
+                function myFunction() {
+                    var element = document.body;
+                    element.classList.toggle("dark-mode");
+                }
+            </script>
+            <ul>
+                <li>
+                    <a href="#"><img src="images/list.JPG"></a>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Contact Us</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <nav>
+
+            <div>
+                <ul>
+                    <li>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">about</a></li>
+                            <li><a href="#">Service</a></li>
+                            <li><a href="#">Contact Us</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <p class="me"><a href="#"> Samia Edrees</a> </p>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Contact Us</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <div class="tag">
+
+        <img src="images/kk.jpg">
+
+    </div>
+
+    <div class="cotainer">
+        <!--this div contains lists -->
+        <div class="first">
+            <h2>Samia Edrees</h2>
+            <p>I am a graduate of the Department of computer Enginering , I love self-education my interpersonal skills
+                allow me to interact with a wide range of clients</p>
+        </div>
+        <div class="second">
+            <button><a href="cv4.pdf">DOWNLOAD CV </a></button>
+        </div>
+        <div class="one">
+
+            <h3>skills</h3>
+
+            <ul>
+                <li>Photoshop </li>
+                <li>PowerPoint</li>
+                <li>HTML/CSS</li>
+
+            </ul>
+        </div>
+
+
+        <div class="three">
+            <h3>services provides</h3>
+            <ul>
+                <li>Human resources manement</li>
+                <li>Front end</li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="work">
+        <div class="tag3">
+            <h3>my works</h3>
+            <img name="slideshow" width="100%">
+            <!--slideshow for images on div one to another-->
+            <script src="java.js"></script>
+
+        </div>
+        <div class="tag4">
+            <img name="slideshow1" width="100%">
+            <script src="java.js"></script>
+        </div>
+
+    </div>
+    <div class="contact">
+        <form action="" method="post">
+            <h3>Contact with us</h3>
+            <div class="groub-input">
+                <input placeholder="your name" type="text" required>
+            </div>
+            <div class="groub-input">
+                <input placeholder="Email" type="text" required>
+            </div>
+            <div class="groub-input">
+                <textarea placeholder="your message"></textarea>
+            </div>
+            <button type="submit">
+                send
+            </button>
+
+        </form>
+    </div>
+    <footer>
+
+        <div class="copy">
+            <!-- about copyrights-->
+            <p>copyright@ for samia saeed</p>
+            <a href="#"><img src="images/if_gmail_1220367.png"></a>
+            <a href="#"><img src="images/whatsapp_icon-icons.com_65942.svg"></a>
+            <a href="#"><img src="images/if_facebook_circle_color_107175.png"></a>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>
